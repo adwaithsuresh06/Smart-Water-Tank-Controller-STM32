@@ -81,3 +81,9 @@ Simulation and functional verification completed using Wokwi.
 - Pump Status: OFF
 
 ![Full Water Level](Images/fulllevel.png)
+
+## Detailed Documentation
+
+For the complete project explanation, working principle,
+system architecture, calculations and simulation results,
+see [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md).
