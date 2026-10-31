@@ -64,7 +64,7 @@ Simulation and functional verification completed using Wokwi.
 - Water Level: 10%
 - Pump Status: ON
 
-![Low Water Level](Images/low level.png)
+![Low Water Level](Images/lowlevel.png)
 
 ### 2. Intermediate Water Level – 70%
 
@@ -72,7 +72,7 @@ Simulation and functional verification completed using Wokwi.
 - Water Level: 70%
 - Pump Status: ON
 
-![Intermediate Water Level](Images/normal level.png)
+![Intermediate Water Level](Images/normallevel.png)
 
 ### 3. Full Water Level – 100%
 
@@ -80,4 +80,4 @@ Simulation and functional verification completed using Wokwi.
 - Water Level: 100%
 - Pump Status: OFF
 
-![Full Water Level](Images/full level.png)
+![Full Water Level](Images/fulllevel.png)
