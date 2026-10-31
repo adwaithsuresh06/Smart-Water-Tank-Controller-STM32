@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "author": "Adwaith Suresh",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-stm32-bluepill",
+      "id": "bluepill",
+      "top": -20.56,
+      "left": 101.97,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -46.5,
+      "left": -292.1,
+      "attrs": { "distance": "2" }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -246.17, "left": -118.4, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -118.8,
+      "left": 301.4,
+      "attrs": { "color": "red", "flip": "" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -118.8,
+      "left": 243.8,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -118.8,
+      "left": 205.4,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -33.6,
+      "left": 239.45,
+      "rotate": 90,
+      "attrs": { "value": "200" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -33.6,
+      "left": 297.05,
+      "rotate": 90,
+      "attrs": { "value": "200" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -33.6,
+      "left": 201.05,
+      "rotate": 90,
+      "attrs": { "value": "200" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 115.4, "left": 441.6, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -122.4,
+      "left": 385.8,
+      "attrs": { "volume": "1.0" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 257.2, "left": 355.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": 34.8,
+      "left": 579.8,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 129.6,
+      "left": 575.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "bluepill:5V.1", "ultrasonic1:VCC", "red", [ "h0" ] ],
+    [ "ultrasonic1:GND", "bluepill:GND.1", "black", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "bluepill:A0", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "bluepill:A1", "green", [ "v0" ] ],
+    [ "lcd1:VSS", "bluepill:GND.1", "green", [ "v0" ] ],
+    [ "lcd1:VDD", "bluepill:5V.1", "green", [ "v0" ] ],
+    [ "lcd1:V0", "bluepill:GND.1", "green", [ "v0" ] ],
+    [ "lcd1:RS", "bluepill:B0", "green", [ "v0" ] ],
+    [ "lcd1:E", "bluepill:B1", "green", [ "v0" ] ],
+    [ "lcd1:D4", "bluepill:B10", "green", [ "v0" ] ],
+    [ "lcd1:D5", "bluepill:B11", "green", [ "v0" ] ],
+    [ "lcd1:D6", "bluepill:B12", "green", [ "v0" ] ],
+    [ "lcd1:D7", "bluepill:B13", "green", [ "v0" ] ],
+    [ "lcd1:A", "bluepill:5V.1", "green", [ "v0" ] ],
+    [ "lcd1:K", "bluepill:GND.1", "green", [ "v0" ] ],
+    [ "relay1:VCC", "bluepill:5V.1", "red", [ "h0" ] ],
+    [ "relay1:GND", "bluepill:GND.1", "black", [ "h0" ] ],
+    [ "relay1:IN", "bluepill:B8", "green", [ "h0" ] ],
+    [ "led1:A", "r2:1", "green", [ "v0" ] ],
+    [ "r2:2", "bluepill:B7", "green", [ "h0", "v123.6" ] ],
+    [ "led1:C", "bluepill:GND.1", "green", [ "v0" ] ],
+    [ "led2:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "bluepill:B6", "green", [ "h0", "v104.4" ] ],
+    [ "led2:C", "bluepill:GND.1", "green", [ "v0" ] ],
+    [ "led3:A", "r3:1", "green", [ "v0" ] ],
+    [ "r3:2", "bluepill:B5", "green", [ "h0", "v94.8" ] ],
+    [ "led3:C", "bluepill:GND.1", "green", [ "v0" ] ],
+    [ "bz1:1", "bluepill:GND.1", "green", [ "v0" ] ],
+    [ "bz1:2", "bluepill:A8", "green", [ "v0" ] ],
+    [ "servo1:PWM", "bluepill:A9", "green", [ "h-153.6", "v0.2", "h9.6" ] ],
+    [ "servo1:V+", "bluepill:5V.1", "red", [ "h-220.8", "v-76.7", "h-105.6", "v-57.6" ] ],
+    [ "servo1:GND", "bluepill:GND.1", "black", [ "h-192", "v-115.2", "h-115.2", "v-19.2" ] ],
+    [ "led4:A", "r4:1", "green", [ "v0" ] ],
+    [ "relay1:COM", "bluepill:5V.1", "green", [ "h20.4", "v56.2", "h-508.8", "v-28.8" ] ],
+    [ "relay1:NO", "r4:2", "green", [ "h1.2", "v36.6", "h48" ] ],
+    [ "led4:C", "bluepill:GND.3", "green", [ "v19.2", "h-76.4", "v-67.2" ] ],
+    [ "lcd1:RW", "bluepill:GND.2", "green", [ "v57.6", "h239.9", "v38.4" ] ]
+  ],
+  "dependencies": {}
+}
