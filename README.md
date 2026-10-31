@@ -55,3 +55,29 @@ The project was developed and tested using the Wokwi simulation environment.
 ## Project Status
 
 Simulation and functional verification completed using Wokwi.
+
+## Simulation Results
+
+### 1. Low Water Level – 10%
+
+- Distance: 81 cm
+- Water Level: 10%
+- Pump Status: ON
+
+![Low Water Level](Images/low level.png)
+
+### 2. Intermediate Water Level – 70%
+
+- Distance: 33 cm
+- Water Level: 70%
+- Pump Status: ON
+
+![Intermediate Water Level](Images/normal level.png)
+
+### 3. Full Water Level – 100%
+
+- Distance: 10 cm
+- Water Level: 100%
+- Pump Status: OFF
+
+![Full Water Level](Images/full level.png)
